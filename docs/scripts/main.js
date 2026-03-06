@@ -125,10 +125,10 @@ let debug = false;
     }
     loadTileDebugSettings();
     const defaultZoneNames = {
-      polygon: "polygon_zone_maaximgl",
-      rectangle: "rectangle_zone_maaximgl",
-      circle: "circle_zone_maaximgl",
-      marker: "marker_zone_maaximgl",
+      polygon: "многоугольник хуй пойми для чего (вот бы имена давать)",
+      rectangle: "прямоугольник хуй пойми для чего (вот бы имена давать)",
+      circle: "круг хуй пойми для чего (вот бы имена давать)",
+      marker: "маркер хуй пойми для чего (вот бы имена давать)",
     };
     const zonePathStyle = {
       color: "#c4a9ff",
