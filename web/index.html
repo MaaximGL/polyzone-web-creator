@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <title>PolyZone Creator</title>
+  <link rel="stylesheet" href="libs/leaflet/leaflet.css" />
+  <link rel="stylesheet" href="libs/leaflet-draw/leaflet.draw.css" />
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <div id="map1"></div>
+
+  <div id="ui">
+    <section class="hud-panel">
+      <header class="hud-head">
+        <h2 id="submenuTitle" class="hud-title">PolyZone Creator</h2>
+      </header>
+
+      <div class="hud-scroll">
+        <div class="top-row">
+          <section class="card stats-card">
+            <strong>Info</strong>
+            <div id="project"></div>
+          </section>
+          <section class="card grid-card">
+            <strong>Grid</strong>
+            <div id="gridControls" class="acts-col"></div>
+          </section>
+          <section class="card data-card">
+            <strong>Data</strong>
+            <div class="data-acts">
+              <div class="data-acts-grid">
+                <button id="expJson" class="sbtn" type="button">Export JSON</button>
+                <button id="impJson" class="sbtn" type="button">Import JSON</button>
+                <button id="expLua" class="sbtn" type="button">Export LUA</button>
+                <button id="impLua" class="sbtn" type="button">Import LUA</button>
+              </div>
+              <div class="data-acts-clear">
+                <button id="clrAll" class="sbtn" type="button">Clear All Shapes</button>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div id="panelActions" class="submenu"></div>
+
+        <div class="panels-row">
+          <div id="panelShapes" class="submenu">
+            <section class="card">
+              <strong id="shapeSub">Shapes</strong>
+              <div id="shapes" class="table"></div>
+            </section>
+          </div>
+  
+          <div id="panelOutput" class="submenu"></div>
+        </div>
+        <div id="panelSettings" class="submenu"></div>
+      </div>
+    </section>
+    <div id="cursorCoordBar" class="cursor-coord-bar">X: 0.00 | Y: 0.00</div>
+    <div class="author-sign">by maaximgl</div>
+    <div id="drawMeasureBubble" class="draw-measure-bubble hidden">R: 0.00</div>
+  </div>
+
+  <input id="jsonFileInput" type="file" accept="application/json,.json" style="display:none" onchange="handleJsonImport(event);" />
+  <input id="luaFileInput" type="file" accept=".lua,text/plain" style="display:none" onchange="handleLuaImport(event);" />
+
+  <script src="libs/leaflet/leaflet.js"></script>
+  <script src="libs/leaflet-draw/leaflet.draw.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+</html>
+
